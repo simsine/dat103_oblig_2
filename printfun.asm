@@ -12,22 +12,13 @@ _start:
     mov ecx,foo
     add ecx,7
     mov [ecx],byte 54   ; Endret
-    mov edx,1
-    mov ebx,1
-    mov eax,4
-    int 80h
+    call printdigit
 
     sub ecx,1   ; Endret
-    mov edx,1
-    mov ebx,1
-    mov eax,4
-    int 80h
+    call printdigit
 
     pop ecx
-    mov edx,1
-    mov ebx,1
-    mov eax,4
-    int 80h
+    call printdigit
 
     mov edx,1
     mov ecx,bar
@@ -37,3 +28,10 @@ _start:
     mov ebx,0
     mov eax,1
     int 80h
+
+printdigit:
+    mov edx,1
+    mov ebx,1
+    mov eax,4
+    int 80h
+    ret
