@@ -9,13 +9,13 @@
 3.
     Linje 14: Vi endrer verdien som ecx nå peker til med byte verdien av 48 ('0' i ascii). Dette vil si at vi bytter ut 'x' i strengen med '0'.
 4.
-    Linje 20: Forskyver ecx adressen med 2 sånn at den peker til '0'    igjen.
+    Linje 20: Forskyver ecx adressen med 2 sånn at den peker til '0' igjen.
 5.
     Linje 26: Vi pop'er stacken og legger adressen inn i ecx.
               Denne linjen relaterer til 10 fordi der la vi til adressen til '0' på stacken.
 6.
-    Linje 32: Vi flytter verdien 1 inn i edx.
-    Linje 33: Vi flytter bar adressen inn i ecx.
-    Linje 34: Vi flytter verdien 1 inn i ebx.
-    Linje 35: Vi flytter verdien 4 inn i eax.
-    Linje 36: Vi gjør et interupt med verdien 80h. Dette tilsvarer et systemkall.
+    Linje 32: Vi flytter verdien 1 inn i edx. Dette betyr size_t av 1
+    Linje 33: Vi flytter bar adressen inn i ecx.   
+    Linje 34: Vi flytter verdien 1 inn i ebx. (int)
+    Linje 35: Vi flytter verdien 4 inn i eax. Dette betyr sys_write
+    Linje 36: Vi gjør et interupt med verdien 80h. Dette tilsvarer et systemkall med de veriene vi satt over.
